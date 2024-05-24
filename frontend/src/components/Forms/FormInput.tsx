@@ -18,8 +18,6 @@ const FormInput = ({ type, name, placeholder, icon }: FormInputTypes) => {
 
   const validationErrors = zodValidator(errors, type);
 
-  
-
   return (
     <fieldset className="space-y-1">
       <Label htmlFor={name}>{name}*</Label>
@@ -33,6 +31,7 @@ const FormInput = ({ type, name, placeholder, icon }: FormInputTypes) => {
           <Fragment>{icon}</Fragment>
         </Icon>
       </div>
+      <span className="text-red-500">{validationErrors && validationErrors}</span>
     </fieldset>
   );
 };
