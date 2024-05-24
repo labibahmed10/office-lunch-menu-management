@@ -15,7 +15,6 @@ type FormProps = {
 
 const Forms = ({ children, defaultValues, submitHandler, resolver }: FormProps) => {
   const formConfig: FormConfig = {};
-  console.log(defaultValues);
 
   if (defaultValues) {
     formConfig["defaultValues"] = defaultValues;
@@ -23,13 +22,12 @@ const Forms = ({ children, defaultValues, submitHandler, resolver }: FormProps) 
   if (resolver) {
     formConfig["resolver"] = resolver;
   }
-  
+
   const methods = useForm(formConfig);
   const { handleSubmit } = methods;
 
   const onsubmit = (data: any) => {
     submitHandler(data);
-    console.log(data);
   };
   return (
     <Card className="min-w-72 sm:min-w-[30rem] shadow-lg">
