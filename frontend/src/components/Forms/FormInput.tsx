@@ -5,27 +5,29 @@ import zodValidator from "../../utils/validate/ZodValidations";
 
 interface FormInputTypes {
   type: string;
-  name: string;
+  label: string;
   placeholder: string;
   icon: ReactNode;
 }
 
-const FormInput = ({ type, name, placeholder, icon }: FormInputTypes) => {
+const FormInput = ({ type, label, placeholder, icon }: FormInputTypes) => {
   const {
     control,
     formState: { errors },
   } = useFormContext();
 
-  const validationErrors = zodValidator(errors, type);
-
+  const validationErrors = zodValidator(errors, label);
+  
   return (
     <fieldset className="space-y-1">
-      <Label htmlFor={name}>{name}*</Label>
+      <Label htmlFor={label} className="capitalize">
+        {label} *
+      </Label>
       <div className="relative">
         <Controller
           control={control}
-          name={type}
-          render={({ field }) => <Input id={name} type={type} placeholder={placeholder} className="ps-11" {...field} value={field?.value} />}
+          name={label}
+          render={({ field }) => <Input id={label} type={type} placeholder={placeholder} className="ps-11" {...field} value={field?.value} />}
         />
         <Icon>
           <Fragment>{icon}</Fragment>

@@ -2,7 +2,7 @@
 const zodValidator = (error: Record<string, any>, name: string) => {
   const properties = name.split(".");
   let value = error;
-
+  
   for (const prop of properties) {
     if (value[prop]) {
       value = value[prop];
