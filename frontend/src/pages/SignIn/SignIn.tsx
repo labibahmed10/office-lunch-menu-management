@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Envelope, Lock } from "phosphor-react";
-import FormInput from "./FormInput";
-import FormButton from "../Buttons/FormButton";
-import Forms from "./Forms";
+import FormInput from "../../components/Forms/FormInput";
+import FormButton from "../../components/Buttons/FormButton";
+import Forms from "../../components/Forms/Forms";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginValidationSchema } from "../../utils/validationSchema/authValidation";
 
