@@ -18,8 +18,8 @@ export const SignIn = () => {
 
   return (
     <Forms submitHandler={submitHandler} defaultValues={defaultValues} resolver={zodResolver(loginValidationSchema)}>
-      <FormInput icon={<Envelope size={19} color="#AFBACA" />} type="email" name="Email" placeholder="Enter your email" />
-      <FormInput icon={<Lock size={19} color="#AFBACA" />} type="password" name="Password" placeholder="Enter your password" />
+      <FormInput icon={<Envelope size={19} color="#AFBACA" />} type="email" label="email" placeholder="Enter your email" />
+      <FormInput icon={<Lock size={19} color="#AFBACA" />} type="password" label="password" placeholder="Enter your password" />
       <FormButton title="Sign In" />
     </Forms>
   );
