@@ -18,11 +18,13 @@ export const SignUp = () => {
   };
 
   return (
-    <Forms submitHandler={submitHandler} defaultValues={defaultValues} resolver={zodResolver(signupValidationSchema)}>
-      <FormInput icon={<Person size={19} color="#AFBACA" />} type="text" label="name" placeholder="Enter your name" />
-      <FormInput icon={<Envelope size={19} color="#AFBACA" />} type="email" label="email" placeholder="Enter your email" />
-      <FormInput icon={<Lock size={19} color="#AFBACA" />} type="password" label="password" placeholder="Enter your password" />
-      <FormButton title="Sign Up" />
-    </Forms>
+    <section className="w-screen h-[calc(100vh-72px)] flex justify-center items-center">
+      <Forms submitHandler={submitHandler} defaultValues={defaultValues} resolver={zodResolver(signupValidationSchema)}>
+        <FormInput icon={<Person size={19} color="#AFBACA" />} type="text" label="name" placeholder="Enter your name" />
+        <FormInput icon={<Envelope size={19} color="#AFBACA" />} type="email" label="email" placeholder="Enter your email" />
+        <FormInput icon={<Lock size={19} color="#AFBACA" />} type="password" label="password" placeholder="Enter your password" />
+        <FormButton title="Sign Up" />
+      </Forms>
+    </section>
   );
 };

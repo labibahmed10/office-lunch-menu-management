@@ -17,10 +17,12 @@ export const SignIn = () => {
   };
 
   return (
-    <Forms submitHandler={submitHandler} defaultValues={defaultValues} resolver={zodResolver(loginValidationSchema)}>
-      <FormInput icon={<Envelope size={19} color="#AFBACA" />} type="email" label="email" placeholder="Enter your email" />
-      <FormInput icon={<Lock size={19} color="#AFBACA" />} type="password" label="password" placeholder="Enter your password" />
-      <FormButton title="Sign In" />
-    </Forms>
+    <section className="w-screen h-[calc(100vh-72px)] flex justify-center items-center">
+      <Forms submitHandler={submitHandler} defaultValues={defaultValues} resolver={zodResolver(loginValidationSchema)}>
+        <FormInput icon={<Envelope size={19} color="#AFBACA" />} type="email" label="email" placeholder="Enter your email" />
+        <FormInput icon={<Lock size={19} color="#AFBACA" />} type="password" label="password" placeholder="Enter your password" />
+        <FormButton title="Sign In" />
+      </Forms>
+    </section>
   );
 };
