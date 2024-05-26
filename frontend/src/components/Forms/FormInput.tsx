@@ -11,13 +11,9 @@ interface FormInputTypes {
 }
 
 const FormInput = ({ type, label, placeholder, icon }: FormInputTypes) => {
-  const {
-    control,
-    formState: { errors },
-  } = useFormContext();
-
+  const { control, formState: { errors } } = useFormContext();
   const validationErrors = zodValidator(errors, label);
-  
+
   return (
     <fieldset className="space-y-1">
       <Label htmlFor={label} className="capitalize">
