@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Envelope, Lock, Person } from "phosphor-react";
+import { Envelope, Lock, Person } from "@phosphor-icons/react";
 import FormInput from "../../components/Forms/FormInput";
 import FormButton from "../../components/Buttons/FormButton";
 import Forms from "../../components/Forms/Forms";
