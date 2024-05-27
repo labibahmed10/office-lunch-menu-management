@@ -1,4 +1,4 @@
-import { SignIn, ListChecks, FilePlus, ListNumbers, CheckSquareOffset } from "phosphor-react";
+import { SignIn, ListChecks, FilePlus, ListNumbers, CheckSquareOffset } from "@phosphor-icons/react";
 import { Avatar, Divider, Sidebar } from "keep-react";
 import userStore from "../../store/createStore";
 
